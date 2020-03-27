@@ -102,6 +102,12 @@ func cleanPhonenumbers(book *Phonebooks) {
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "-", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "(", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, ")", "", -1)
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "/", "", -1)
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "\\", "", -1)
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "!", "", -1)
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "?", "", -1)
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "&", "", -1)									     
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "$", "", -1)									     
 			}
 		}
 	}
