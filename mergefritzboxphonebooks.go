@@ -106,8 +106,8 @@ func cleanPhonenumbers(book *Phonebooks) {
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "\\", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "!", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "?", "", -1)
-				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "&", "", -1)									     
-				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "$", "", -1)									     
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "&", "", -1)
+				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "$", "", -1)
 			}
 		}
 	}
@@ -166,8 +166,8 @@ func mergePhonebooks(book1 *Phonebooks, book2 *Phonebooks) {
 
 // MergeFritzBoxPhoneBooks takes two pointers to two XML exports of FritzBox phonebooks
 // The numbers will be clean from the characters '.', ',', '-' and ' '
-// The result will be written to 'phonebook.xml'
-func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool) {
+// The result will be written to a new XML file. The name is specified by 'outputFilename'
+func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool, outputFilename string) {
 	// read content of book 1
 	byteContentBook1, errRead1 := ioutil.ReadAll(book1)
 	if errRead1 != nil {
@@ -240,7 +240,7 @@ func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool
 	}
 
 	// open target file
-	f, fileError := os.OpenFile("phonebook.xml", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0755)
+	f, fileError := os.OpenFile(outputFilename+".xml", os.O_TRUNC|os.O_CREATE|os.O_WRONLY, 0755)
 	if fileError != nil {
 		fmt.Println(fileError)
 	}
