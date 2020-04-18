@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phonebooks>
+    <phonebook name="testDuplicate1">
+        <contact>
+            <category>0</category>
+            <person>
+                <realName>testDuplicate1</realName>
+            </person>
+            <telephony nid="1">
+                <number type="home" quickdial="" vanity="" prio="1" id="0">080012345</number>
+                <number type="work" quickdial="" vanity="" prio="1" id="0">080012386</number>
+            </telephony>
+            <services></services>
+            <mod_time>1452674035</mod_time>
+            <uniqueid>688</uniqueid>
+        </contact>
+        <contact>
+            <category>0</category>
+            <person>
+                <realName>testDuplicate2</realName>
+            </person>
+            <telephony nid="1">
+                <number type="home" quickdial="" vanity="" prio="1" id="0">080097852</number>
+            </telephony>
+            <services></services>
+            <mod_time>1452674035</mod_time>
+            <uniqueid>6837</uniqueid>
+        </contact>
+        <contact>
+            <category>0</category>
+            <person>
+                <realName>testNoDuplicate</realName>
+            </person>
+            <telephony nid="1">
+                <number type="home" quickdial="" vanity="" prio="1" id="0">0800978525687423</number>
+                <number type="work" quickdial="" vanity="" prio="1" id="0">080097879884312357</number>
+                <number type="mobile" quickdial="" vanity="" prio="1" id="0">879846534135746853</number>
+            </telephony>
+            <services></services>
+            <mod_time>1452674035</mod_time>
+            <uniqueid>68837</uniqueid>
+        </contact>
+        <contact>
+            <category>0</category>
+            <person>
+                <realName>testDuplicate3</realName>
+            </person>
+            <telephony nid="1">
+                <number type="home" quickdial="" vanity="" prio="1" id="0">08009978435687423</number>
+                <number type="work" quickdial="" vanity="" prio="1" id="0">080097879884312357</number>
+                <number type="mobile" quickdial="" vanity="" prio="1" id="0">879843258135746853</number>
+            </telephony>
+            <services></services>
+            <mod_time>1452674035</mod_time>
+            <uniqueid>35742</uniqueid>
+        </contact>
+    </phonebook>
+</phonebooks>
