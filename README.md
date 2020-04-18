@@ -4,7 +4,9 @@ This programm aims to merge two phonebooks managed by a FritzBox. The phonebooks
 # Signature
 The avaiable function has the signature
 - MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool, outputFilename, phonebookName string)
+
 where
+
 - _book1_ and _book2_ are the file descriptors to XML Files in questsion
 - _removeSpecialCharacters_ sets if the special characters should be removed
 - _outputFilename_ specifies the resulting XML-File name
