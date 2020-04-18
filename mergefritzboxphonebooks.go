@@ -106,7 +106,6 @@ func cleanPhonenumbers(book *Phonebooks) {
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "\\", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "!", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "?", "", -1)
-				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "&", "", -1)
 				book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number = strings.Replace(book.Phonebooks[i].Contacts[j].Telephony.Numbers[k].Number, "$", "", -1)
 			}
 		}
@@ -165,7 +164,7 @@ func mergePhonebooks(book1 *Phonebooks, book2 *Phonebooks) {
 }
 
 // MergeFritzBoxPhoneBooks takes two pointers to two XML exports of FritzBox phonebooks
-// The numbers will be clean from the characters '.', ',', '-' and ' '
+// If removeSpecialCharacters is true the numbers will be clean from the characters spaces, commas, dashes, full stops, brackets slash, backslash, !, ? or $
 // The result will be written to a new XML file. The name is specified by 'outputFilename'
 // The name of the resulting phonebook is specified at 'phonebookName'
 func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool, outputFilename, phonebookName string) {

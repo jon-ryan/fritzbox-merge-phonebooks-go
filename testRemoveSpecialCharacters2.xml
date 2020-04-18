@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phonebooks>
-    <phonebook name="testAppend2">
+    <phonebook name="testRemoveSpecialCharacters2">
         <contact>
             <category>0</category>
             <person>
-                <realName>TestAppend2</realName>
+                <realName>testRemoveSpecialCharacters2</realName>
             </person>
             <telephony nid="1">
-                <number type="home" quickdial="" vanity="" prio="1" id="0">080023456</number>
+                <number type="home" quickdial="" vanity="" prio="1" id="0">0 ,8-0.0/2\3!3544$5</number>
             </telephony>
             <services></services>
             <mod_time>1452674036</mod_time>
