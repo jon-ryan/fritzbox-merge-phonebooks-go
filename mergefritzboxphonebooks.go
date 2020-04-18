@@ -167,7 +167,8 @@ func mergePhonebooks(book1 *Phonebooks, book2 *Phonebooks) {
 // MergeFritzBoxPhoneBooks takes two pointers to two XML exports of FritzBox phonebooks
 // The numbers will be clean from the characters '.', ',', '-' and ' '
 // The result will be written to a new XML file. The name is specified by 'outputFilename'
-func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool, outputFilename string) {
+// The name of the resulting phonebook is specified at 'phonebookName'
+func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool, outputFilename, phonebookName string) {
 	// read content of book 1
 	byteContentBook1, errRead1 := ioutil.ReadAll(book1)
 	if errRead1 != nil {
@@ -223,7 +224,7 @@ func MergeFritzBoxPhoneBooks(book1, book2 *os.File, removeSpecialCharacters bool
 	mergePhonebooks(&phonebooks1, &phonebooks2)
 
 	// rename phonebok
-	phonebooks1.Phonebooks[0].Name = "MergedPhonebook"
+	phonebooks1.Phonebooks[0].Name = phonebookName
 
 	fmt.Println("\n--- Shape of Result Book ---")
 	fmt.Println("Name of Phonebook:", phonebooks1.Phonebooks[0].Name)

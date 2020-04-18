@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phonebooks>
+    <phonebook name="testAppend1">
+        <contact>
+            <category>0</category>
+            <person>
+                <realName>TestAppend1</realName>
+            </person>
+            <telephony nid="1">
+                <number type="home" quickdial="" vanity="" prio="1" id="0">080012345</number>
+            </telephony>
+            <services></services>
+            <mod_time>1452674035</mod_time>
+            <uniqueid>688</uniqueid>
+        </contact>
+        <contact>
+            <category>0</category>
+            <person>
+                <realName>TestAppend2</realName>
+            </person>
+            <telephony nid="1">
+                <number type="home" quickdial="" vanity="" prio="1" id="0">080023456</number>
+            </telephony>
+            <services></services>
+            <mod_time>1452674036</mod_time>
+            <uniqueid>689</uniqueid>
+        </contact>
+    </phonebook>
+</phonebooks>
